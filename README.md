@@ -12,19 +12,31 @@ actions within the environment, enhancing the relevance and applicability of its
 Environment Description:
 Defined environment with state space comprising pickup zone, time of day (morning, afternoon, evening, night), and day of the week.
 State Space:
+
 a) Zone – This is the driver’s current zone.
+
 b) Time of the Day – This is the time zone of the day where the day is divided into morning, afternoon, evening, night.
+
 c) Day of the week – This is the day of the week starting from Monday till Sunday. 
 
+
 Actions Space:
+
 a) Action 0, Zone - Wait: This action represents the driver wanting to wait in the same zone for 15 minutes.
+
 b) Action 1, Zone - Accept Trip: This action represents the driver accepting the next quickest ride within the same zone, if the drop location is in a different zone, then we reduce the fare by a negative penalty.
+
 c) Action 2 , Zone – Move to another zone: This action represents the driver wanting to move to another zone without taking a ride.
 
 Total of 267 zones representing areas across Bronx, Brooklyn, Manhattan, Queens, and Staten Island accurately reflect geographical diversity of taxi service area.
 
+
 Rewards:
 a) Reward $0 -This is the reward given for waiting in the same zone.
+
 b) Reward $Fare - This is the reward given for completing the ride in the same zone.
+
 c) Reward $Fare – Penalty - This is the reward given for completing the ride in a different zone.
+
 d) Reward $Penalty - This is a negative reward where the driver moves to another zone without a trip.
+
